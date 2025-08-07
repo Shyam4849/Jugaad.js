@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       musicOutput.innerHTML = '';
 
       // ✅ Fetch quote from your own mood API (replace the URL)
-      fetch(`https://your-api.com/api/quotes?mood=${selectedMood}`)
+      fetch(`https://zenquotes.io/api/quotes/keyword=${selectedMood}`)
         .then(response => response.json())
         .then(data => {
           // ✅ Assuming the response contains { quote: "...", author: "..." }
