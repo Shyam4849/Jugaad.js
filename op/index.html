@@ -82,7 +82,7 @@
         </main>
 
         <!-- Auth Modal -->
-        <!-- <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
             <div class="modal" onclick="event.stopPropagation()">
                 <div class="modal-header">
                     <h3>Welcome to Moodify</h3>
@@ -96,7 +96,24 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+        <div class="container">
+        <div class="spotify-box">
+            
+            <h2>Now Playing 🎵</h2>
+            <div class="spotify-embed">
+                <!-- Replace this with your own Spotify embed URL -->
+                <iframe 
+                src="https://open.spotify.com/embed/track/3n3Ppam7vgaVa1iaRUc9Lp?utm_source=generator"
+                width="100%" 
+                height="100%" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allow="encrypted-media">
+            </iframe>
+        </div>
+    </div>
     </div>
 
     <script src="script.js"></script>
