@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Mood Quote Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        .emoji-button { font-size: 2rem; margin: 10px; padding: 10px 20px; cursor: pointer; }
+        #quote { font-size: 1.2rem; margin-top: 30px; font-style: italic; color: #333; }
+    </style>
+</head>
+<body>
+    <h2>How are you feeling?</h2>
+    <button class="emoji-button" onclick="showQuote('happy')">😊</button>
+    <button class="emoji-button" onclick="showQuote('sad')">😔</button>
+    <button class="emoji-button" onclick="showQuote('angry')">😡</button>
+    <button class="emoji-button" onclick="showQuote('surprised')">😲</button>
+    <button class="emoji-button" onclick="showQuote('love')">❤️</button>
+
+    <div id="quote"></div>
+
+    <script>
+        const quotes = {
+            happy: [
+                "Happiness is not by chance, but by choice. – Jim Rohn",
+                "Wherever you go, no matter the weather, always bring your own sunshine."
+            ],
+            sad: [
+                "Tough times never last, but tough people do. – Robert H. Schuller",
+                "It’s okay to not be okay. Tomorrow is another day."
+            ],
+            angry: [
+                "For every minute you are angry you lose sixty seconds of happiness. – Ralph Waldo Emerson",
+                "Anger doesn’t solve anything; it builds nothing, but it can destroy

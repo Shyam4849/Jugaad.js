@@ -1,3 +1,5 @@
+from home_page import views
+
 """
 URL configuration for moodify_project project.
 
@@ -19,4 +21,5 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.homepage),
 ]
