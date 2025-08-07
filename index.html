@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify - Get Your Quote Based on Your Mood</title>
+    <meta name="description" content="Get personalized quotes based on your current mood">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Moodify</h1>
+            <!-- <button class="auth-button" onclick="openModal()">Sign Up / Sign In</button> -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="hero-section">
+                <h2 class="hero-title">Get Your Quote Based on Your Mood</h2>
+                <!-- <p class="hero-subtitle">Upload your images and let inspirational quotes transform your mood</p> -->
+                
+                <!-- Mood Selection Area -->
+                <div class="mood-selection-container">
+                    <div class="mood-selection-area">
+                        <div class="mood-icon">😊</div>
+                        <h3>Choose Your Mood</h3>
+                        <p>Select how you're feeling to get the perfect quote</p>
+                        <div class="mood-options" id="moodOptions">
+                            <button class="mood-button active" data-mood="all" onclick="selectMood('all')">
+                                <span class="mood-emoji">😔</span>
+                                <span class="mood-label">Sad</span>
+                            </button>
+                            <button class="mood-button" data-mood="motivated" onclick="selectMood('motivated')">
+                                <span class="mood-emoji">💪</span>
+                                <span class="mood-label">Motivated</span>
+                            </button>
+                            <button class="mood-button" data-mood="reflective" onclick="selectMood('reflective')">
+                                <span class="mood-emoji">🤔</span>
+                                <span class="mood-label">Reflective</span>
+                            </button>
+                            <button class="mood-button" data-mood="hopeful" onclick="selectMood('hopeful')">
+                                <span class="mood-emoji">🌅</span>
+                                <span class="mood-label">Hopeful</span>
+                            </button>
+                            <button class="mood-button" data-mood="encouraging" onclick="selectMood('encouraging')">
+                                <span class="mood-emoji">🌈</span>
+                                <span class="mood-label">Encouraging</span>
+                            </button>
+                            <button class="mood-button" data-mood="inspiring" onclick="selectMood('inspiring')">
+                                <span class="mood-emoji">✨</span>
+                                <span class="mood-label">Inspiring</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Slideshow -->
+                <div class="slideshow-container">
+                    <div class="slideshow-wrapper" id="slideshowWrapper">
+                        <!-- Slides will be dynamically generated here -->
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="slideshow-controls">
+                        <button class="nav-button prev" onclick="previousSlide()">‹</button>
+                        <div class="slide-indicators" id="slideIndicators"></div>
+                        <button class="nav-button next" onclick="nextSlide()">›</button>
+                    </div>
+                    
+                    <!-- Playback Controls -->
+                    <div class="playback-controls">
+                        <button class="control-button" id="playPauseButton" onclick="toggleAutoplay()">⏸️</button>
+                        <span class="control-text">Auto-play enabled</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Auth Modal -->
+        <!-- <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+            <div class="modal" onclick="event.stopPropagation()">
+                <div class="modal-header">
+                    <h3>Welcome to Moodify</h3>
+                    <button class="close-button" onclick="closeModal()">×</button>
+                </div>
+                <div class="modal-content">
+                    <p>Sign up or sign in to save your favorite quotes and upload your personal images.</p>
+                    <div class="modal-buttons">
+                        <button class="modal-button primary">Sign Up</button>
+                        <button class="modal-button secondary">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
